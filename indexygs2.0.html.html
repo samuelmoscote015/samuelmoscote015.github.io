@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Gamer Store</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0f172a;
+            color: #ffffff;
+            margin: 0;
+        }
+
+        header {
+            background-color: #1e293b;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            color: #22c55e;
+            margin: 0;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .product {
+            background-color: #1e293b;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .price {
+            color: #22c55e;
+            font-size: 20px;
+            margin: 10px 0;
+        }
+
+        a.button {
+            display: inline-block;
+            background-color: #22c55e;
+            color: #000;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        a.button:hover {
+            background-color: #16a34a;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #1e293b;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Your Gamer Store</h1>
+    <p>Compra tus accesorios gamer favoritos</p>
+</header>
+
+<div class="container">
+
+    <div class="product">
+        <h2>Mouse Gamer 7200 DPI</h2>
+        <p class="price">$33.000</p>
+        <a class="button" onclick="comprarWhatsApp('Mouse Gamer 7200 DPI', '$33.000')">Comprar</a>
+    </div>
+
+    <div class="product">
+        <h2>Mando Alámbrico Turtle Beach Xbox</h2>
+        <p class="price">$90.000</p>
+        <a class="button" onclick="comprarWhatsApp('Mando Alámbrico Turtle Beach Xbox', '$90.000')">Comprar</a>
+    </div>
+
+    <div class="product">
+        <h2>Disco Duro Externo 512GB</h2>
+        <p class="price">$70.000</p>
+        <a class="button" onclick="comprarWhatsApp('Disco Duro Externo 512GB', '$70.000')">Comprar</a>
+    </div>
+
+    <div class="product">
+        <h2>Disco Duro Externo 1TB</h2>
+        <p class="price">$120.000</p>
+        <a class="button" onclick="comprarWhatsApp('Disco Duro Externo 1TB', '$120.000')">Comprar</a>
+    </div>
+
+    <div class="product">
+        <h2>Teclado Gamer Membrana Xtrike Me</h2>
+        <p class="price">$60.000</p>
+        <a class="button" onclick="comprarWhatsApp('Teclado Gamer Membrana Xtrike Me', '$60.000')">Comprar</a>
+    </div>
+
+    <div class="product">
+        <h2>Puerto USB 4 Puertos 3.0</h2>
+        <p class="price">$30.000</p>
+        <a class="button" onclick="comprarWhatsApp('Puerto USB 4 Puertos 3.0', '$30.000')">Comprar</a>
+    </div>
+
+    <div class="product">
+        <h2>Base Refrigerante Portátil (2 Ventiladores)</h2>
+        <p class="price">$50.000</p>
+        <a class="button" onclick="comprarWhatsApp('Base Refrigerante Portátil (2 Ventiladores)', '$50.000')">Comprar</a>
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2026 Your Gamer Store</p>
+</footer>
+
+<!-- FUNCIÓN WHATSAPP -->
+<script>
+function comprarWhatsApp(producto, precio) {
+    const telefono = "573227041746";
+    const mensaje = `Hola, quiero comprar el producto: ${producto}. Precio: ${precio}`;
+    const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
+    window.open(url, "_blank");
+}
+</script>
+
+</body>
+</html>
+
